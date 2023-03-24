@@ -33,7 +33,7 @@ let selectedColors = []; //Square bracket empty = empty array
 selectedColors = ["red", "blue", "green"];
 selectedColors[4] = "cyan";
 selectedColors[3] = 4;
-console.log(selectedColors.[3]);
+console.log(selectedColors[3]);
 //each value has index. This will call based on index value.
 
 // 3.Funtions
