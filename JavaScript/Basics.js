@@ -1,4 +1,12 @@
 //VARIABLES
+let name = 'Aisyah';
+console.log(name);
+//Naming variable cannot be reserved keywords
+//example: let, if, else
+//Should be meaningful
+//Cannot start with number
+//Cannot contain a space or hyphen(-)
+//Are case-sensitive
 
 // Primitives/Value Types
 // 1.string 2.number 3.boolean 4.undefined 5.null
