@@ -1,12 +1,16 @@
-//VARIABLES
+// VARIABLES
 let name = 'Aisyah';
 console.log(name);
-//Naming variable cannot be reserved keywords
-//example: let, if, else
-//Should be meaningful
-//Cannot start with number
-//Cannot contain a space or hyphen(-)
-//Are case-sensitive
+// Naming variable cannot be reserved keywords
+// example: let, if, else
+// Should be meaningful
+// Cannot start with number
+// Cannot contain a space or hyphen(-)
+// Are case-sensitive
+
+// CONSTANT
+// Value of variable can be changed. but value of constant CANNOT.
+const skillValue = 100;
 
 // Primitives/Value Types
 // 1.string 2.number 3.boolean 4.undefined 5.null
@@ -17,7 +21,7 @@ let isApproved = false; //Boolean Literal
 let firstName = undefined; //Undefined
 let lastName = null; //Empty value
 
-//Reference Types
+// Reference Types
 // 1.Object 2.Array 3.Function
 
 // 1.Objects
@@ -27,11 +31,11 @@ let person = {
 };
 console.log(person);
 
-//Dot Notation
+// Dot Notation
 person.age = 29;
 console.log(person.age);
 
-//Bracket Notation
+// Bracket Notation
 let selection = "names"; //dynamic property
 person[selection] = "Fareez Murad";
 console.log(person["names"]);
@@ -42,26 +46,26 @@ selectedColors = ["red", "blue", "green"];
 selectedColors[4] = "cyan";
 selectedColors[3] = 4;
 console.log(selectedColors[3]);
-//each value has index. This will call based on index value.
+// Each value has index. This will call based on index value.
 
 // 3.Funtions
 
-//performing a task
+// Performing a task
 
-//Declaration of function
-//can have multiple parameter. separate using a comma
+// Declaration of function
+// Can have multiple parameter. separate using a comma
 function greet(names, lastNames) {
-  //body of the function
+  // body of the function
   console.log("hello " + names + " " + lastNames);
 }
-//call the function
+// Call the function
 greet("fareez", "murad");
 greet("syira", "lokman");
-//'fareez' is an argument to the greet function and name is a parameter of the greet function
-//parameter=in square bracket at the time of declaration
-//argument=actual value of supplay to that parameter
+// 'fareez' is an argument to the greet function and name is a parameter of the greet function
+// Parameter=in square bracket at the time of declaration
+// Argument=actual value of supplay to that parameter
 
-//calculating a value
+// Calculating a value
 function square(number) {
   return number * number; //return=return the value to whoever call it.
 }
