@@ -15,7 +15,7 @@ const skillValue = 100;
 // Primitives/Value Types
 // 1.string 2.number 3.boolean 4.undefined 5.null
 
-let names = "Fareez"; //String Literal
+let names = 'Fareez'; //String Literal
 let age = 30; //Number Literal(including float numbers)
 let isApproved = false; //Boolean Literal
 let firstName = undefined; //Undefined
@@ -36,14 +36,14 @@ person.age = 29;
 console.log(person.age);
 
 // Bracket Notation
-let selection = "names"; //dynamic property
-person[selection] = "Fareez Murad";
-console.log(person["names"]);
+let selection = 'names'; //dynamic property
+person[selection] = 'Fareez Murad';
+console.log(person['names']);
 
 // 2.Arrays (array size and object are dynamic)
 let selectedColors = []; //Square bracket empty = empty array
-selectedColors = ["red", "blue", "green"];
-selectedColors[4] = "cyan";
+selectedColors = ['red', 'blue', 'green'];
+selectedColors[4] = 'cyan';
 selectedColors[3] = 4;
 console.log(selectedColors[3]);
 // Each value has index. This will call based on index value.
@@ -56,11 +56,11 @@ console.log(selectedColors[3]);
 // Can have multiple parameter. separate using a comma
 function greet(names, lastNames) {
   // body of the function
-  console.log("hello " + names + " " + lastNames);
+  console.log('hello ' + names + ' ' + lastNames);
 }
 // Call the function
-greet("fareez", "murad");
-greet("syira", "lokman");
+greet('fareez', 'murad');
+greet('syira', 'lokman');
 // 'fareez' is an argument to the greet function and name is a parameter of the greet function
 // Parameter=in square bracket at the time of declaration
 // Argument=actual value of supplay to that parameter

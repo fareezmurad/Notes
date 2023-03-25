@@ -42,12 +42,12 @@ console.log(b <= 1);
 // Equality Operators
 // Stric equality (type + value)
 console.log(b === 1); // check if true : TRUE
-console.log("f" === 1); // false because 'is string'. 1 is number. The type and value is different
+console.log('f' === 1); // false because 'is string'. 1 is number. The type and value is different
 console.log(b !== 1); // check if false : FALSE
 
 // Lose equality (value)
 console.log(1 == 1); // TRUE because the value is the same
-console.log("1" == 1); // TRUE because 'RHS 1' convert to string also become "1"
+console.log('1' == 1); // TRUE because 'RHS 1' convert to string also become "1"
 console.log(true == 1); // TRUE because 'RHS 1 convert to boolean also become true
 
 // Ternary Operators (conditional operators)
@@ -56,7 +56,7 @@ console.log(true == 1); // TRUE because 'RHS 1 convert to boolean also become tr
 // They are a silver customer.
 
 let points = 100;
-let type = points >= 100 ? "gold" : "silver";
+let type = points >= 100 ? 'gold' : 'silver';
 console.log(type);
 
 // 4. Logical Operators
@@ -95,7 +95,7 @@ let applicationRefused = !eligibleForLoan;
 
 // Example
 let userColor;
-let defaultColor = "dark";
+let defaultColor = 'dark';
 let currentColor = userColor || defaultColor;
 
 console.log(currentColor);
@@ -134,7 +134,7 @@ const executePermission = 1;
 let myPermission = 0; //0 = no permission
 myPermission = myPermission | readPermission | writePermision; // Permission only on read and write.Not execute
 console.log(myPermission);
-let message = myPermission & executePermission ? "YES" : "NO";
+let message = myPermission & executePermission ? 'YES' : 'NO';
 console.log(message); // Return NO. YES if read and write permissions
 
 // Operators Precendence
