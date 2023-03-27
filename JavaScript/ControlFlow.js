@@ -125,7 +125,7 @@ while (a <= 20) {
 }
 
 // Exercise 1
-let number = max(200, 11);
+let value = max(200, 11);
 
 function max(a, b) {
   //   if (a > b) return a;
@@ -135,7 +135,7 @@ function max(a, b) {
   return a > b ? a : b;
 }
 
-console.log(number);
+console.log(value);
 
 // Exercise 2
 let orientations = isLandscape(1920, 1080);
@@ -259,10 +259,10 @@ const marks = [80, 80, 50];
 // 80-89: B
 // 90-100: A
 
-console.log(calculateGrade(marks));
+console.log(calculateGrade(array));
 
 function calculateGrade(marks){
-  const average = calculateAverage(marks); // call calculateAverage function.
+  const average = calculateAverage(marks); // call calculateAverage function. Need to declare the function or else, the function don't know it's role.
 
   if (average < 60) return 'F'
   if (average < 70) return 'D'
@@ -275,7 +275,7 @@ function calculateAverage(array){
   let sum = 0; // Initial value of sum
   for (let value of array) // use FOR OF loop for iterate over an array.
     sum += value; // value of array will be added to sum and will iterate over if the value is exist.
-  return sum / array.length; // return the value to sum variable.
+  return sum / array.length; // return the value of the average.
 }
 
 // Exercise 10
@@ -287,7 +287,7 @@ function showStars(rows) {
     let starPattern = ''; // set variable to empty string.
     for (let i = 0; i < row; i++) // set DUMMY iteration reference to row FOR loop to add * string count.
       starPattern += '*'; // add * string to each row.
-    console.log(starPattern);
+    console.log(starPattern); // use console.log. If use return, it will not iterate.
   }
 }
 
