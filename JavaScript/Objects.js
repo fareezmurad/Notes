@@ -29,3 +29,26 @@ const circle = {
 circle.draw();
 
 // FACTORY FUNCTIONS
+// To avoid duplication and easy for maintaining code.
+// Factory functions produce object.
+
+// Example of factory function of a circle.
+function createCircle(radius) {
+  return {
+    radius, // If key and value are the same, we can remove the value. In this case: radius, = radius: radius,
+    draw() { // Other style to type function inside an object
+      console.log('draw');
+    }
+    /*draw: function(){
+      console.log('draw');
+    }*/
+  };
+}
+
+// To call the createCircle object
+const circle1 = createCircle(1);
+console.log(circle1);
+circle1.draw();
+
+const circle2 = createCircle(2);
+console.log(circle2);
