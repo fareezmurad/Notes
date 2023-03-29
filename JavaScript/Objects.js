@@ -52,3 +52,21 @@ circle1.draw();
 
 const circle2 = createCircle(2);
 console.log(circle2);
+
+// CONSTRUCTOR FUNCTIONS
+// Others method to create an object
+/* Naming convention for creating Constructor Function is called PASCAL Notation: all 1st letter of every word is uppercase.
+For example: OneTwoThreeFour, CreateCircle. */
+
+function Circle(radius) {
+  this.radius = radius; // THIS: refer to object. In this case, it's 'Circle' object. 
+  // In other words, it is equal to Circle.radius or Circle['radius'].
+  this.draw = function() {
+    console.log('draw');
+  }
+}
+
+const circle3 = new Circle(1); // NEW: is to create new/empty object based on constructor function
+console.log(circle3);
+
+// Both CONSTRUCTOR FUNCTIONS and FACTORY FUNCTION are do the same thing. Either one can be use.
