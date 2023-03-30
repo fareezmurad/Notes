@@ -1,5 +1,5 @@
 // BASICS
-// Object are collections of key value pairs
+// Object are collections of key value pairs. Also known as Object Literal Syntax
 // If we have properties that are highly related, we want to encapsulate them inside of an objects
 
 // Example of circle value
@@ -70,3 +70,32 @@ const circle3 = new Circle(1); // NEW: is to create new/empty object based on co
 console.log(circle3);
 
 // Both CONSTRUCTOR FUNCTIONS and FACTORY FUNCTION are do the same thing. Either one can be use.
+
+// DYNAMIC NATURE OF OBJECTS
+// Can add or remove properties of an object
+
+const rectangle = { // Initial properties of an object
+  corner: 4
+};
+// You can dynamically change the object properties but you cannot reassign the constant variable of an object. In this case, constant variable is rectangle.
+/* 
+Example of reassign the rectangle. 
+rectangle = {}; 
+*/
+
+rectangle.color = 'red'; // Add properties to an object
+rectangle.draw = function() {} // Add method to an object (using dot notation)
+
+console.log(rectangle); // Show object after added properties
+
+delete rectangle.color; // DELETE: to delete properties of an object
+delete rectangle['draw']; // Delete method of an object (using bracket notation)
+
+console.log(rectangle); // Show object after delete properties
+
+// CONSTRUCTOR PROPERTY
+// Every object in JavaScript has property called constructor.
+// Reference the function that was used to construct or create the object.
+// Every object has a constructor property and that references a function that was use to create that object.
+
+

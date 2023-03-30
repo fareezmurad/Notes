@@ -1,6 +1,6 @@
 # My Private Notes
 
-This repository contains my personal notes on JavaScript, which I am learning through various sources including online courses, books, and tutorials. These notes include examples and explanations of various JavaScript concepts and techniques.
+This repository contains my personal notes, which I am learning through various sources including online courses, books, and tutorials. These notes include examples and explanations of various concepts and techniques.
 
 ## Table of Contents
 
@@ -18,7 +18,6 @@ To use these notes, simply clone this repository to your local machine:
 ```
 git clone git@github:fareezmurad/Notes.git
 ```
-
 
 Then, open the files in your preferred text editor to review the notes.
 
