@@ -263,6 +263,7 @@ Other programming languages such as C and C++ need to allocate and deallocate th
 */
 
 // MATH
+// Refer MDN for more info https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 /* 
 Built-in object in javascript that has properties and methods for mathematical constant and functions.
 It's not a function object.
@@ -280,3 +281,54 @@ function randomNumberGenerator(limit) {
 }
 
 console.log(randomNumberGenerator(100));
+
+// STRING
+// String have 2 types
+// Refer MDN for more info https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+// Another important things in string is ESCAPE SEQUENCE (learn more on MDN)
+
+// String Primitive
+const message = 'This is my first message'; // typeof message = 'string'
+
+/*
+Example
+message.length to count number of character in a string primitive.
+
+function msgLengthChk (limit) {
+  if (message.length > limit) console.log('over');
+  else console.log('good');
+}
+msgLengthChk (30);
+*/
+
+// String Object
+const anotherString = new String('hi') // typeof anotherString = 'object'
+
+// TEMPLATE LITERALS
+/*
+Object {}
+Boolean true, false
+String '', ""
+Template ``
+*/
+
+const message1 = 'This is\n my first message';
+// Above string is basicly same with below string in terms of the output on the console. 
+// But the below string is much cleaner.
+// Below is what we called TEMPLATE LITERALS
+const anothermessage = `This is 
+my first message`;
+
+const name = 'Timmy';
+/* const message2 = 'Hi' + name + ',\n'; 
+Instead using this, better use template literal for cleaner and understandable code. */
+
+const message2 = 
+`Hi ${name},
+
+Thank you for joining my mailing list.
+
+Regards,
+Fareez`;
+// ${}
+// Use $(dollar sign) and {}(curly braces) to add/insert any variable/expression/function in template literals.
