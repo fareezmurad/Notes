@@ -6,10 +6,10 @@ This repository contains my personal notes, which I am learning through various 
 
 ### JavaScript
 
-- [Basics](./JavaScript/Basics.js)
-- [Operators](./JavaScript/Operators.js)
-- [Control Flow](./JavaScript/ControlFlow.js)
-- [Objects](./JavaScript/Objects.js)
+1. [Basics](./JavaScript/Basics.js)
+2. [Operators](./JavaScript/Operators.js)
+3. [Control Flow](./JavaScript/ControlFlow.js)
+4. [Objects](./JavaScript/Objects.js)
 
 ## Getting Started
 
