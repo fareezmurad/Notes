@@ -183,3 +183,34 @@ console.log(obj); // show the properties value after being called twice
 
 // Primitives are copied by their value
 // Objects are copied by their reference
+
+
+// ENUMERATING PROPERTIES OF AN OBJECT
+
+const square = {
+  corner: 4,
+  draw () {
+    console.log('draw square');
+  }
+};
+
+for (let key in square)
+  console.log(key, square[key]);
+/* for (let key of square)
+  console.log(key); */ 
+  // Will got error. Because it is not iterable.
+  // For Of loops only can be use on array or maps. Not on object
+  // Object is not iterable
+
+// But we can use For Of loop this way:
+for (let key of Object.keys(square))
+  console.log(key);
+// Object.keys : this method returns a string of array which contains all the properties and method of an object.
+
+for (let entry of Object.entries(square))
+  console.log(entry);
+// Object.entries : this method returns each entry value pair as an array.
+
+if ('radius' in square) console.log('yes');
+else console.log('No');
+// To check if the properties exist in the given object
