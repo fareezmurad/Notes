@@ -263,3 +263,20 @@ Other programming languages such as C and C++ need to allocate and deallocate th
 */
 
 // MATH
+/* 
+Built-in object in javascript that has properties and methods for mathematical constant and functions.
+It's not a function object.
+MATH work with number type only and does not work with BigInt (numeric values which are too large to be represented by the number) 
+MATH is not a constructor.
+All properties and methods of MATH are static
+*/
+
+// Example
+// Math.random
+// Get random number between 0 and limit
+
+function randomNumberGenerator(limit) {
+  return Math.floor(Math.random() * limit);
+}
+
+console.log(randomNumberGenerator(100));
