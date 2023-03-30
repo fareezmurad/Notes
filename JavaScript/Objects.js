@@ -214,3 +214,41 @@ for (let entry of Object.entries(square))
 if ('radius' in square) console.log('yes');
 else console.log('No');
 // To check if the properties exist in the given object
+
+// CLONING AN OBJECT
+
+const pentagon = {
+  corner: 5,
+  draw: function() {
+    console.log('draw pentagon');
+  }
+}
+/* This is OLD METHOD
+const another1 = {};
+console.log(another1); // This object currently have empty property
+
+// Use For In loop to iterate over the properties and copy/cloning all the properties of pentagon to another1
+for (let key in pentagon){
+  another1[key] = pentagon[key];
+}
+*/
+
+/* New Method
+const another1 = Object.assign({}, pentagon) // This will take all the properties of this method in the source object and copies them into the new object.
+// Can also add new properties using this method.
+/* Example
+const another1 = Object.assign({
+  color: 'red'
+}, pentagon) */
+
+// Much Simpler Method
+const another1 = { ...pentagon}; // Called as spread operator (3 dots)
+// It take all properties and method of object and put them in between the curly braces.
+
+console.log(another1); // This object after copy the properties of pentagon
+
+/* 
+Object.assign: copies the properties and methods from 1 or more source objects into a target object.
+Can use that to clone an object or combine multiple objects into a single object.
+
+{...} spread operator: is used to spread an object, means getting all properties and method, and putting them into another object.
