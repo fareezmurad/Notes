@@ -252,3 +252,14 @@ Object.assign: copies the properties and methods from 1 or more source objects i
 Can use that to clone an object or combine multiple objects into a single object.
 
 {...} spread operator: is used to spread an object, means getting all properties and method, and putting them into another object.
+*/
+
+// GARBAGE COLLECTION
+/*
+The job of this garbage collector is to find the variable or constant that are no longer in use.
+Then deallocate the memory that was allocated to them earlier.
+Memory allocation and deallocation done automatically behind the scene.
+Other programming languages such as C and C++ need to allocate and deallocate the memory that being use manually.
+*/
+
+// MATH
