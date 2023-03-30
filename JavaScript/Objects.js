@@ -332,3 +332,16 @@ Regards,
 Fareez`;
 // ${}
 // Use $(dollar sign) and {}(curly braces) to add/insert any variable/expression/function in template literals.
+
+// DATE
+// Refer MDN for more info https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+// Objects represent a single moment in time in a platform-independent format.
+
+// This is how we create DATE object
+const now = new Date()
+const date1 = new Date('March 30 2023 23:03');
+const date2 = new Date(2023, 2, 30, 23, 3);
+
+// Date have bunch of GET and SET method
+now.setFullYear(2020);
+// Example to set YEAR
