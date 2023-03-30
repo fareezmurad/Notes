@@ -6,10 +6,9 @@ This repository contains my personal notes on JavaScript, which I am learning th
 
 To use these notes, simply clone this repository to your local machine:
 
-'''
-git clone
-git@github:fareezmurad/Notes.git
-'''
+```
+git clone git@github:fareezmurad/Notes.git
+```
 
 
 Then, open the files in your preferred text editor to review the notes.
