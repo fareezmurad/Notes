@@ -1,8 +1,10 @@
-# My Private JavaScript Notes
+# My Private Notes
 
 This repository contains my personal notes on JavaScript, which I am learning through various sources including online courses, books, and tutorials. These notes include examples and explanations of various JavaScript concepts and techniques.
 
 ## Table of Contents
+
+### JavaScript
 
 - [Basics](./JavaScript/Basics.js)
 - [Operators](./JavaScript/Operators.js)
