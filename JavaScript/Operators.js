@@ -103,7 +103,7 @@ console.log(currentColor);
 
 // 5. Bitwise Operators
 
-// Decinal to Binary (8-bit)
+// Decimal to Binary (8-bit)
 // 1 = 00000001
 // 2 = 00000010
 
