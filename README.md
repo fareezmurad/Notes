@@ -6,7 +6,7 @@ This repository contains my personal notes, which I am learning through various 
 
 ### JavaScript
 
-1. [Basics](./JavaScript/Basics.js)
+1. [Basics](./JavaScript/Basics.md)
 2. [Operators](./JavaScript/Operators.js)
 3. [Control Flow](./JavaScript/ControlFlow.js)
 4. [Objects](./JavaScript/Objects.js)
