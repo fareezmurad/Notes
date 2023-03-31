@@ -82,7 +82,7 @@ console.log(person['names']);
 
 ### Arrays
 
-Array size and object are **dynamic**. The properties of an array can be **add, change or deleted**.
+Array size and object are **dynamic**. The properties of an array can be **add and change**.
 
 ```js
 let selectedColors = []; //Square bracket empty = empty array
