@@ -16,7 +16,7 @@ This repository contains my personal notes, which I am learning through various 
 To use these notes, simply clone this repository to your local machine:
 
 ```
-git clone git@github:fareezmurad/Notes.git
+git clone git@github.com:fareezmurad/Notes.git
 ```
 
 Then, open the files in your preferred text editor to review the notes.
