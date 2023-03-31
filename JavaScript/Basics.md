@@ -14,9 +14,7 @@ View output on the console
 console.log(name);
 ```
 
-Naming variable cannot use reserved keywords
-
-- Example: let, if, else
+- Naming variable cannot use reserved keywords. Example: let, if, else
 - Should be meaningful
 - Cannot start with number
 - Cannot contain a space or hyphen(-)
