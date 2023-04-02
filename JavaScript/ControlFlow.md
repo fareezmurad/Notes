@@ -172,7 +172,7 @@ while (i < 5) {
 
 This code will run indefinitely as the increment expression is not included in the loop, causing the value of `i` to remain 0 and always less than 5.
 
-## FOR IN LOOP
+## For In Loop
 
 - It is used to iterate over the properties of an object.
 - It is not ideal to use for iterating over arrays.
@@ -199,7 +199,7 @@ for (let index in colors) {
 // Output: 0 red, 1 green, 2 blue
 ```
 
-## FOR OF LOOP
+## For Of Loop
 
 - It is used to iterate over the elements/items in an array.
 - It cannot be used to iterate over object properties.
@@ -214,7 +214,7 @@ for (let color of colors) {
 // Output: red, green, blue
 ```
 
-## BREAK and CONTINUE
+## Break and Continue
 
 The `break` and `continue` statements are used to control the flow of loops in JavaScript. The `break` statement is used to exit a loop immediately, while the `continue` statement is used to skip the current iteration and move to the next one.
 
