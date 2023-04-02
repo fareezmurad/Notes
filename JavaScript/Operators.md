@@ -37,8 +37,6 @@ console.log(y); // 1
 >
 > However, the position of the operator (before or after the variable) affects when the increment/decrement takes place.
 
-<br>
-
 ## Assignment Operators
 
 Assignment operators are used to assign values to variables. JavaScript provides shorthand syntax for these assignments called "Assignment Operators".
@@ -67,8 +65,6 @@ console.log(a); // Output: 30
 > Note that the above syntax is equivalent to the longer version of the assignment (e.g., `a = a + 5`).
 >
 > It's a shorthand that is used to save time and space.
-
-<br>
 
 ## Comparison Operators
 
@@ -150,8 +146,6 @@ console.log(type); // gold
 
 In the example above, if the `points` variable is greater than or equal to 100, the value of `type` will be `'gold'`, otherwise it will be `'silver'`.
 
-<br>
-
 ## Logical Operators
 
 Logical operators are used to compare two or more values and return a boolean result. There are three logical operators in JavaScript, which are:
@@ -218,8 +212,6 @@ console.log(currentColor); // dark because userColor is undefined (falsy)
 
 In the above example, `userColor` is undefined, which is a falsy value. Therefore, `currentColor` is assigned the value of `defaultColor`, which is `'dark'`.
 
-<br>
-
 ## Bitwise Operators
 
 Bitwise operators are used in JavaScript to manipulate the binary representation of numbers. They can be used to perform bitwise operations such as AND, OR, NOT, and XOR on binary values.
@@ -270,8 +262,6 @@ console.log(message); // Output: NO. YES if read and write permissions
 ```
 
 In the above example, the read, write, and execute permissions are represented by the binary values of 100, 010, and 001, respectively. By using the OR operator, we set the permission for read and write only, not execute. Finally, by using the AND operator, we check if the execute permission is set or not. If it is set, the output will be `'YES'`, otherwise it will be `'NO'`.
-
-<br>
 
 ## Operators Precedence
 
