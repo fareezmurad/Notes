@@ -184,7 +184,9 @@ Spread operators in JavaScript provide an efficient way to manipulate arrays. Th
 
 In JavaScript, we use the spread operator (`...`) to expand an iterable (like an array or string) into multiple elements. We can use the spread operator in various situations, such as:
 
-1. Combining arrays:<br> We can combine two or more arrays into a new array using the spread operator.
+### 1. Combining arrays:
+
+We can combine two or more arrays into a new array using the spread operator.
 
 ```js
 const first1 = [1, 2, 3];
@@ -193,21 +195,27 @@ const second2 = [4, 5, 6];
 const combine = [...first1, ...second2]; // [1, 2, 3, 4, 5, 6]
 ```
 
-2. Copying arrays:<br> We can create a new copy of an array using the spread operator.
+### 2. Copying arrays:
+
+We can create a new copy of an array using the spread operator.
 
 ```js
 const arr = [1, 2, 3];
 const copy = [...arr]; // [1, 2, 3]
 ```
 
-3. Adding elements to an array:<br> We can add new elements to an array using the spread operator.
+### 3. Adding elements to an array:
+
+We can add new elements to an array using the spread operator.
 
 ```js
 const arr = [1, 2, 3];
 const newArr = [...arr, 4, 5]; // [1, 2, 3, 4, 5]
 ```
 
-4. Passing arguments:<br> We can pass an array as arguments to a function using the spread operator.
+### 4. Passing arguments:
+
+We can pass an array as arguments to a function using the spread operator.
 
 ```js
 const arr = [1, 2, 3];
@@ -215,7 +223,9 @@ const sum = (a, b, c) => a + b + c;
 const result = sum(...arr); // 6
 ```
 
-5. Converting iterable to an array:<br> We can convert an iterable object to an array using the spread operator.
+### 5. Converting iterable to an array:
+
+We can convert an iterable object to an array using the spread operator.
 
 ```js
 const str = 'hello';
