@@ -10,6 +10,7 @@ This repository contains my personal notes, which I am learning through various 
 2. [Operators](./JavaScript/Operators.md)
 3. [Control Flow](./JavaScript/ControlFlow.js)
 4. [Objects](./JavaScript/Objects.js)
+5. [Arrays](./JavaScript/Arrays.md)
 
 ## Getting Started
 
