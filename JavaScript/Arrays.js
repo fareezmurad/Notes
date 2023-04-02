@@ -43,3 +43,8 @@ const course = courses.find(function (course) {
   // return undefined if there is no corresponding element in the object
 });
 console.log(course);
+
+// ARROW FUNCTION
+const course = courses.find((course) => course.name === 'a');
+console.log(course);
+// Shorter way to write a function
