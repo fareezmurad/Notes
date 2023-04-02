@@ -48,3 +48,66 @@ console.log(course);
 const course = courses.find((course) => course.name === 'a');
 console.log(course);
 // Shorter way to write a function
+
+// REMOVING ELEMENTS
+const number = [1, 2, 3, 4];
+
+// End
+const last = number.pop();
+
+// Beginning
+const start = number.shift();
+
+// Middle
+const mid = number.splice(2, 1); // Parameter take 2 arguments. (index number in array, number of elements to delete)
+
+// EMPTYING AN ARRAY
+let arrayOfNumber = [1, 2, 3, 4];
+
+// Solution 1
+arrayOfNumber = [];
+
+// Solution 2
+arrayOfNumber.length = 0;
+
+// Solution 3
+arrayOfNumber.splice(0, arrayOfNumber.length);
+
+// Solution 4
+while (arrayOfNumber > 0) arrayOfNumber.pop(); // Not recommended if array size is big. Gonna cost performance issue
+
+// COMBINING AND SLICING ARRAYS
+const first = [1, 2, 3];
+const second = [4, 5, 6];
+
+// Combined
+const combined = first.concat(second);
+
+// Slicing
+combined.slice(2, 6);
+/* Arguments (starting index, number of elements) or 
+(starting index): combined.slice(2) or
+(no argument): combined.slice() (slicing all the elements) */
+
+// SPREAD OPERATORS
+const first1 = [1, 2, 3];
+const second2 = [4, 5, 6];
+
+// Use spread operator to combine elements in array
+const combine = [...first1, ...second2];
+/* Basically, we creating new array by adding individual elements from `first1` and `second2` array.
+You can also add element in between them: [...first1, 'a', ...second2, 'b']*/
+
+// Below method, same as: `const copy = combine.slice()`
+const copy = [...combine];
+
+// ITERATING AN ARRAY
+let nums = [1, 2, 3];
+
+// 1st method: for..of loop
+for (let num of nums) console.log(num);
+
+// 2nd method: forEach method
+nums.forEach((num) => console.log(num));
+/* forEach loop also take second parameter: index.
+example: nums.forEach((num, index) => console.log(index, num)) */
