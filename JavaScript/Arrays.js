@@ -179,3 +179,73 @@ console.log(atLeastOnePositive); // true
 /* `some`: in this callback function, `some` will check to see if we have at least one element in this array that matches our given criteria. */
 
 // *some older browser do not support this method
+
+// FILTERING AN ARRAY
+const numbers = [1, -1, 2, 3];
+
+// Filter positive number.
+// `filter`: loop through array, and execute callback function for each element.
+const filtered = numbers.filter((value) => value >= 0);
+
+console.log(filtered); // [1, 2, 3]
+
+// MAPPING AN ARRAY
+// Example of mapping a number into string
+const numbers = [1, -1, 2, 3];
+
+const filtered = numbers.filter((value) => value >= 0);
+
+// Create HTML Markup using `filtered` numbers
+const items = filtered.map((value) => '<li>' + value + '</li>');
+/* output:
+'<li>1</li>'
+'<li>2</li>'
+'<li>3</li>'
+*/
+const html = '<ul>' + items.join('') + '</ul>';
+/* output: <ul><li>1</li><li>2</li><li>3</li></ul>
+ */
+
+console.log(html);
+
+// Example mapping a number into object
+const items = filtered.map((value) => ({ v: value }));
+
+console.log(items);
+
+// Simpler method to write above code (chain method)
+/* const items = numbers
+  .filter(value => value >= 0)
+  .map(value => ({v: value}));
+*/
+
+// REDUCING AN ARRAY
+
+// Calculate sum of all these numbers in this array.
+// This numbers represent the price of an item in a shopping cart
+const numbers = [1, -1, 2, 3];
+
+// Method 1 (`for..of` loop method)
+/* 
+let sum = 0;
+for (let n of numbers) sum += n;
+console.log(sum);
+*/
+
+// Method 2 (`reduce` method)
+// Reduce all the elements in an array into a single value. It can be a number, string, object or anything.
+
+// How reduce method works!
+// accumulator = 0, currentValue = 1 => accumulator = 1
+// accumulator = 1, currentValue = -1 => accumulator = 0
+// accumulator = 0, currentValue = 2 => accumulator = 2
+// accumulator = 2, currentValue = 3 => accumulator = 5
+const sum = numbers.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  0
+);
+
+console.log(sum);
+// `reduce` has 2 arguments. First argument is callback function. Second argument is the initial value for the `accumulator`.
+
+// If the `accumulator` is not initialize, it will take value of the first element in the array
