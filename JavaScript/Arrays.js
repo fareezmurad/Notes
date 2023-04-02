@@ -111,3 +111,71 @@ for (let num of nums) console.log(num);
 nums.forEach((num) => console.log(num));
 /* forEach loop also take second parameter: index.
 example: nums.forEach((num, index) => console.log(index, num)) */
+
+// JOINING ARRAYS
+// `join` method; join element in the array
+const numbers = [1, 2, 3];
+const joined = numbers.join(',');
+console.log(joined);
+
+// `split` method: split string into elements
+// *not part of array. it is part of string
+const message = 'hello, this is my message';
+const parts = message.split(' ');
+console.log(parts);
+// combine back the `split` `message`
+const combine = parts.join('-');
+console.log(combine);
+// Partically useful when building a URL slug
+// white space replaced with hyphen in the URL
+
+// SORTING ARRAYS
+
+const numbers = [2, 3, 1];
+// `sort`: convert each elements to a string, then sort the elements in the array.
+numbers.sort();
+console.log(numbers); // [1, 2, 3]
+
+// `reverse : sort elements in reverse order.
+numbers.reverse();
+console.log(numbers); // [3, 2, 1]
+
+/* `sort` and `method` are pretty useful when you have numbers and string in a arrays.
+It doesn't work by default for objects, you have to do some extra work */
+
+// Example of sorting an objects
+const courses = [
+  { id: 1, name: 'Node.js' },
+  { id: 2, name: 'javaScript' },
+];
+
+courses.sort((a, b) => {
+  // Below method to exclude Case Sensitive comparing
+  // `toUpperCase` : convert string to uppercase
+  // `toLowerCase` : convert string to lowercase
+  const nameA = a.name.toUpperCase();
+  const nameB = b.name.toUpperCase();
+
+  // a < b => -1
+  // a < b => 1
+  // a === b => 0
+  if (nameA < nameB) return -1;
+  if (nameA > nameB) return 1;
+  return 0;
+});
+
+console.log(courses);
+
+// TESTING THE ELEMENTS OF AN ARRAY
+const numbers = [1, 2, 3, -4];
+
+// Check the numbers in the array if they are positive
+const allPositive = numbers.every((value) => value >= 0);
+console.log(allPositive); // false
+/* `every`: in this callback function, `every` will check each element if they are matches our given criteria. */
+
+const atLeastOnePositive = numbers.some((value) => value >= 0);
+console.log(atLeastOnePositive); // true
+/* `some`: in this callback function, `some` will check to see if we have at least one element in this array that matches our given criteria. */
+
+// *some older browser do not support this method
