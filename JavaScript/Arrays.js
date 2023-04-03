@@ -249,3 +249,46 @@ console.log(sum);
 // `reduce` has 2 arguments. First argument is callback function. Second argument is the initial value for the `accumulator`.
 
 // If the `accumulator` is not initialize, it will take value of the first element in the array
+
+// Exercise 1
+// Array from range
+
+const numbers = arrayFromRange(1, 55);
+
+console.log(numbers);
+
+function arrayFromRange(min, max) {
+  const output = [];
+  for (let i = min; i <= max; i++) output.push(i);
+  return output;
+}
+
+// Exercise 2
+// Includes
+
+const numbers = [1, 2, 3, 4];
+
+function includes(array, searchElement) {
+  for (let element of array) {
+    if (element === searchElement) return true;
+  }
+  return false;
+}
+
+console.log(includes(numbers, 3));
+
+// Exercise 3
+// Except
+
+const numbers = [1, 2, 3, 4];
+
+const output = except(numbers, [4, 3]);
+
+console.log(output);
+
+function except(array, excluded) {
+  const output = [];
+  for (let element of array)
+    if (!excluded.includes(element)) output.push(element);
+  return output;
+}
