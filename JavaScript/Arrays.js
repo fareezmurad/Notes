@@ -292,3 +292,112 @@ function except(array, excluded) {
     if (!excluded.includes(element)) output.push(element);
   return output;
 }
+
+// Exercise 4
+// Moving an Element
+const numbers = [1, 2, 3, 4];
+
+const output = move(numbers, 1, 3);
+
+console.log(output);
+
+function move(array, index, offset) {
+  const output = [];
+  const position = index + offset;
+  if (position < array.length && position >= 0) {
+    for (let element of array) output.push(element);
+    const removed = output.splice(index, 1)[0];
+    output.splice(position, 0, removed);
+    return output;
+  }
+  console.error('Invalid offset');
+}
+
+// Exercise 5
+// Count Occurrences
+
+const numbers = [1, 2, 3, 4, 1, 2, 2];
+
+const count = countOccurrences(numbers, 2);
+
+console.log(count);
+
+// For Of Loop and if method
+function countOccurrences(array, searchElement) {
+  let count = 0;
+  for (let element of array) if (element === searchElement) count++;
+  return count;
+}
+
+// Reduce method
+function countOccurrences(array, searchElement) {
+  return array.reduce((accumulator, currentValue) => {
+    if (currentValue === searchElement) accumulator++;
+    return accumulator;
+  }, 0);
+}
+
+function countOccurrences(array, searchElement) {
+  return array.reduce((accumulator, currentValue) => {
+    const occurence = currentValue === searchElement ? 1 : 0;
+    return accumulator + occurence;
+  }, 0);
+}
+
+// Exercise 6
+// Get Max
+
+const numbers = [11, 2, 3, 4, 10];
+
+const max = getMax(numbers);
+
+console.log(max);
+
+function getMax(array) {
+  if (array.length === 0) return undefined;
+
+  let maxValue = 0;
+  for (let i = 0; i < array.length; i++)
+    if (array[i] > maxValue) maxValue = array[i];
+  return maxValue;
+}
+
+function getMax(array) {
+  if (array.length === 0) return undefined;
+
+  return array.reduce((accumulator, currentValue) => {
+    if (accumulator > currentValue) return accumulator;
+    return currentValue;
+  });
+}
+
+function getMax(array) {
+  if (array.length === 0) return undefined;
+
+  return array.reduce((accumulator, currentValue) =>
+    accumulator > currentValue ? accumulator : currentValue
+  );
+}
+
+// Exercise 7
+// Movies
+
+const movies = [
+  { title: 'a', year: 2018, rating: 4.5 },
+  { title: 'b', year: 2018, rating: 4.7 },
+  { title: 'c', year: 2018, rating: 3 },
+  { title: 'd', year: 2017, rating: 4.5 },
+];
+
+// All the movies in 2018 with rating > 4
+// Sort them by their rating
+// Descending order
+// Pick their title
+
+const movieTitle = movies
+  .filter((m) => m.year === 2018 && m.rating >= 4)
+  .sort((a, b) => a.rating - b.rating)
+  .reverse()
+  .map((m) => m.title);
+
+console.log(movieTitle);
