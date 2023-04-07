@@ -125,3 +125,32 @@ const person = {
 person.fullName = 'Novac Djokovic';
 
 console.log(person.fullName); // With getter, you can drop the function bracket to call the methods of an object.
+
+// TRY AND CATCH (ERROR HANDLING)
+const person = {
+  firstName: 'Fareez',
+  lastName: 'Murad',
+  get fullName() {
+    return `${person.firstName} ${person.lastName}`;
+  },
+  set fullName(value) {
+    if (typeof value !== 'string') throw new Error('Value is not a string'); // Throw error if value is other than a string.
+    const parts = value.split(' ');
+    if (parts !== 2) throw new Error('Enter first and last name.'); // Throw error if value is less or more than 2 value.
+    this.firstName = parts[0];
+    this.lastName = parts[1];
+  },
+};
+
+// `try...catch` statement is comprised of a `try` block and either a `catch` block, a `finally` block, or both. The code in the `try` block is executed first, and if it throws an exception, the code in the `catch` block will be executed. The code in the `finally` block will always be executed before control flow exits the entire construct.
+try {
+  person.fullName = ''; // try statements
+} catch (e) /* (Exception variabel) */ {
+  alert(e); // catch statements
+}
+
+// person.fullName = 'Novak Djokovic';
+// If we supply a value other than `string`, you get an error.
+// Because split method only take a string as arguments.
+
+console.log(person);
