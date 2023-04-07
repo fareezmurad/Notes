@@ -38,3 +38,19 @@ run();
 let run = function () {
   console.log('run');
 };
+
+// ARGUMENTS
+function some(a, b) {
+  return a + b; // 1 + undefined
+}
+
+console.log(some(1)); // NaN
+
+// Flexible arguments
+function sum() {
+  let total = 0;
+  for (let value of arguments) total += value;
+  return total;
+}
+
+console.log(sum(1, 2, 3, 4, 5));
