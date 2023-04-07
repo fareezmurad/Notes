@@ -69,13 +69,13 @@ function sum(discount, ...prices) {
 console.log(sum(0.1, 20, 30));
 
 // DEFAULT PARAMETERS
-// function interest(principle, rate, years) {
-//   rate = rate || 3.5; // If arguments is now supply, the default value will be 3.5
-//   years = years || 5; // Default value for year arguments is 5.
-//   return ((principle * rate) / 100) * years;
-// }
+function interest(principle, rate, years) {
+  rate = rate || 3.5; // If arguments is now supply, the default value will be 3.5
+  years = years || 5; // Default value for year arguments is 5.
+  return ((principle * rate) / 100) * years;
+}
 
-// console.log(interest(10000));
+console.log(interest(10000));
 
 // or
 // We can supply arguments value direcly in the parameter of a function.
@@ -89,19 +89,19 @@ console.log(interest(10000));
 
 // GETTERS AND SETTERS
 // Example:
-// const person = {
-//   firstName: 'Fareez',
-//   lastName: 'Murad',
-//   fullName() {
-//     return `${person.firstName} ${person.lastName}`;
-//   },
-// };
+const person = {
+  firstName: 'Fareez',
+  lastName: 'Murad',
+  fullName() {
+    return `${person.firstName} ${person.lastName}`;
+  },
+};
 
 // Template literal
-// console.log(`${person.firstName} ${person.lastName}`);
+console.log(`${person.firstName} ${person.lastName}`);
 
 // Add template literal as a method in person object and simply call the method for cleaner code.
-// console.log(person.fullName());
+console.log(person.fullName());
 
 // Getters => access properties
 // Setters => change (mutate) them
