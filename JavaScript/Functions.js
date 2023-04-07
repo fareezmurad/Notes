@@ -67,3 +67,22 @@ function sum(discount, ...prices) {
 }
 
 console.log(sum(0.1, 20, 30));
+
+// DEFAULT PARAMETERS
+// function interest(principle, rate, years) {
+//   rate = rate || 3.5; // If arguments is now supply, the default value will be 3.5
+//   years = years || 5; // Default value for year arguments is 5.
+//   return ((principle * rate) / 100) * years;
+// }
+
+// console.log(interest(10000));
+
+// or
+// We can supply arguments value direcly in the parameter of a function.
+// Once you give default value in parameter, you should give all the parameters after that a default value.
+
+function interest(principle, rate = 3.5, years = 5) {
+  return ((principle * rate) / 100) * years;
+}
+
+console.log(interest(10000));
