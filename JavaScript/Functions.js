@@ -54,3 +54,16 @@ function sum() {
 }
 
 console.log(sum(1, 2, 3, 4, 5));
+
+// REST OPERATOR
+// Rest operator refer `...` (3 dots) in parameter of a function.
+// When we apply rest operator to a parameter of a function, we can pass varying number of arguments and the rest operator will take all of them and put them in an array.
+// Rest operator must be last parameter in function parameter. SO we cannot have parameters after rest operator.
+// Not to confused with spread operator.
+
+function sum(discount, ...prices) {
+  const totalPrices = prices.reduce((a, b) => a + b);
+  return totalPrices * (1 - discount);
+}
+
+console.log(sum(0.1, 20, 30));
