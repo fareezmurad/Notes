@@ -86,3 +86,42 @@ function interest(principle, rate = 3.5, years = 5) {
 }
 
 console.log(interest(10000));
+
+// GETTERS AND SETTERS
+// Example:
+// const person = {
+//   firstName: 'Fareez',
+//   lastName: 'Murad',
+//   fullName() {
+//     return `${person.firstName} ${person.lastName}`;
+//   },
+// };
+
+// Template literal
+// console.log(`${person.firstName} ${person.lastName}`);
+
+// Add template literal as a method in person object and simply call the method for cleaner code.
+// console.log(person.fullName());
+
+// Getters => access properties
+// Setters => change (mutate) them
+
+// simply add `get` keyword before the method in an object
+// `set` method is to change the properties of an object
+// `set` method need a parameter.
+const person = {
+  firstName: 'Fareez',
+  lastName: 'Murad',
+  get fullName() {
+    return `${person.firstName} ${person.lastName}`;
+  },
+  set fullName(value) {
+    const parts = value.split(' '); // Split the value by looking for `'(space)'`
+    this.firstName = parts[0]; // value with index of [0] will be the firstName
+    this.lastName = parts[1]; // value with index of [1] will be the lastName
+  },
+};
+
+person.fullName = 'Novac Djokovic';
+
+console.log(person.fullName); // With getter, you can drop the function bracket to call the methods of an object.
