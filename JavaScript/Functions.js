@@ -165,3 +165,30 @@ console.log(message); // error. const not defined
 
 const color = 'red'; // While this const is global scope because there is no block to contain this variable. So it can be accessible from any part of this javascript file.
 // Sidenote: Try to avoid defining global variable, because it can be access on the entire javascript file and can lead to bug.
+
+// LET vs VAR
+
+// 1st issue with `var`
+function start() {
+  for (let i = 0; i < 5; i++) console.log(i);
+  console.log(i);
+  /* Error. `i` is not defined. 
+  Because i is not accessible outside for loop block.
+  But if you replace `let` to `var` in for loop block, `i` will be accessible outside of the for loop block
+  `var` is not limited to the block in which it's defined.
+  But it is limited to the function in which it's defined */
+}
+
+start();
+
+// Before ES6 (ES2015), `var` is the only way to declare a variable.
+// `var` => function-scoped variables.
+// After ES6 release:
+// `let`, `const` => block-scoped variables.
+
+// 2nd issue with `var`
+var color = 'red';
+// if `var` declare outside of a function, this create global variable and attaches that global variable to the window object in the browser.
+// It also will affect third party library with the same variable's name.
+let age = 29;
+// `let` on other hand will not attaches to the global variable
