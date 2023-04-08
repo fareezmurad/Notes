@@ -154,3 +154,14 @@ try {
 // Because split method only take a string as arguments.
 
 console.log(person);
+
+// LOCAL VS GLOBAL SCOPE
+
+// `const` and `let` are limited to the block/curly braces. It cannot be accessible outside the curly braces.
+function start() {
+  const message = 'hi'; // this const is local scope which is cannot be accessible outside of this function.
+}
+console.log(message); // error. const not defined
+
+const color = 'red'; // While this const is global scope because there is no block to contain this variable. So it can be accessible from any part of this javascript file.
+// Sidenote: Try to avoid defining global variable, because it can be access on the entire javascript file and can lead to bug.
