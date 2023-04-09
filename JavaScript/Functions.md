@@ -369,7 +369,7 @@ const videos = {
 videos.showTags(); // Just a Title a, Just a Title b, Just a Title c
 ```
 
-## CHANGING THE VALUE OF `this`
+## Changing The Value of `this`
 
 The `this` keyword in JavaScript can be a bit confusing, especially when dealing with methods and callbacks. Sometimes we need to change the value of `this` to point to a different object. There are a few ways to do this in JavaScript.
 
