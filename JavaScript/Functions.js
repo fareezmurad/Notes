@@ -233,3 +233,57 @@ const videos = {
 };
 
 videos.showTags();
+
+// CHANGING THE VALUE OF `this`
+// 1st solution
+const video = {
+  title: 'd',
+  tags: ['a', 'b', 'c'],
+  showTags() {
+    const self = this; // Not preferable approach
+    this.tags.forEach(function (tag) {
+      console.log(self.title, tag);
+    });
+  },
+};
+
+video.showTags();
+
+// 2nd solution
+function playVideo() {
+  console.log(this);
+}
+
+playVideo.call({ name: 'Fareez' }); // Here we pass a new object. So 'this' will represent the new object.
+playVideo.apply({ name: 'Fareez' }); // Same as above method.
+// The difference between `apply` and `call` only about passing arguments.
+// with `call` you can supply arguments like normal.
+// with `apply` you have to pass the arguments as an array.
+playVideo.bind({ name: 'Fareez' }); // `bind` does not call the `playVideo` function in this case. It returns a new function and sets `this` to point this object permanently.
+playVideo(); // This will represent window object.
+
+const video = {
+  title: 'd',
+  tags: ['a', 'b', 'c'],
+  showTags() {
+    this.tags.forEach(
+      function (tag) {
+        console.log(this.title, tag);
+      }.bind(this)
+    ); // This will permanently bind `this` to `video` obj.
+  },
+};
+
+// 3rd solution
+// You can also use arrow function, which is it inherit the `this` value.
+const video = {
+  title: 'd',
+  tags: ['a', 'b', 'c'],
+  showTags() {
+    this.tags.forEach((tag) => {
+      console.log(this.title, tag);
+    });
+  },
+};
+
+video.showTags();
