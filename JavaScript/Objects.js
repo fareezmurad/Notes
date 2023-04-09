@@ -197,18 +197,18 @@ const square = {
 };
 
 for (let key in square) console.log(key, square[key]);
-/* for (let key of square)
-  console.log(key); */
+for (let key of square)
+  console.log(key);
 // Will got error. Because it is not iterable.
 // For Of loops only can be use on array or maps. Not on object
 // Object is not iterable
 
 // But we can use For Of loop this way:
 for (let key of Object.keys(square)) console.log(key);
-// Object.keys : this method returns a string of array which contains all the properties and method of an object.
+Object.keys : this method returns a string of array which contains all the properties and method of an object.
 
 for (let entry of Object.entries(square)) console.log(entry);
-// Object.entries : this method returns each entry value pair as an array.
+Object.entries : this method returns each entry value pair as an array.
 
 if ('radius' in square) console.log('yes');
 else console.log('No');
