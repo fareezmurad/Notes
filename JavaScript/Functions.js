@@ -192,3 +192,44 @@ var color = 'red';
 // It also will affect third party library with the same variable's name.
 let age = 29;
 // `let` on other hand will not attaches to the global variable
+
+// THE THIS KEYWORD
+// `this` is referencing the OBJECT THAT IS EXECUTING THE CURRENT FUNCTION.
+
+// If the function is part of the object: method => obj (`this` referencing the obj itself)
+// if the function is a regular function: function => global obj (window obj, global node)
+
+const video = {
+  title: 'a',
+  play() {
+    console.log(this); // `this` referencing the `video` obj in this case.
+  },
+};
+
+// `video.stop` technically a method in `video` obj. So `this` keyword still referencing the obj itself.
+video.stop = function () {
+  console.log(this);
+};
+
+// `playVideo` this by default is referencing global obj
+function playVideo() {
+  console.log(this);
+}
+
+video.play(); // {title: 'a', play: f, stop: f}
+video.stop(); // {title: 'a', play: f, stop: f}
+playVideo(); // window obj
+
+const videos = {
+  title: 'Just a Title',
+  tags: ['a', 'b', 'c'],
+  showTags() {
+    this.tags.forEach(function (tag) {
+      console.log(this.title, tag);
+      // `this.title` is undefined because `this` in this case were contain inside a `forEach` callback function. So it referencing normal function which is represent a global window obj.
+      // The solution for this is adding 2nd parameter in forEach method. We can supply `this` as a 2nd arguments which will referencing the `videos` obj.
+    });
+  },
+};
+
+videos.showTags();
