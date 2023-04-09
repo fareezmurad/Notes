@@ -1,4 +1,4 @@
-# JavaSript Operators
+# Operators in JavaScript
 
 ## Arithmetic Operators
 
