@@ -234,7 +234,7 @@ for (let key in pentagon){
 /* New Method
 const another1 = Object.assign({}, pentagon) // This will take all the properties of this method in the source object and copies them into the new object.
 // Can also add new properties using this method.
-/* Example
+// Example
 const another1 = Object.assign({
   color: 'red'
 }, pentagon) */

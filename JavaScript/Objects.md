@@ -232,3 +232,109 @@ d = { value: 20}
 In this example, we can see that when we assigned the object `c` to `d`, it did not create a new copy of the object. Instead, both `c` and `d` point to the same object in memory. Therefore, when we reassigned the value of `c.value` to 20, it also updated the value of `d.value` because both variables reference the same object in memory.
 
 > It's important to understand the difference between value and reference types in JavaScript because it can affect the way we write our code. If we pass a reference type to a function and modify it inside the function, the changes will be reflected outside the function. This can cause unexpected behavior in our code, especially in larger applications. Therefore, it's important to be mindful of the types of data we are working with and how they are copied and stored in memory.
+
+## Enumerating Properties of an Object
+
+In JavaScript, we can use various methods to iterate over the properties of an object. One of the most common methods is using a `for...in` loop. This loop allows us to loop over all the properties and methods of an object.
+
+However, we cannot use the `for...of` loop on an object directly because an object is not iterable. To loop over an object using `for...of`, we can use methods such as `Object.keys()` or `Object.entries()`.
+
+Examples:
+
+1. Using a `for...in` loop to enumerate object properties:
+
+```js
+const square = {
+  corner: 4,
+  draw() {
+    console.log('draw square');
+  },
+};
+
+for (let key in square) {
+  console.log(key, square[key]);
+}
+```
+
+Output:
+
+```js
+corner 4
+draw function() { console.log('draw square'); }
+```
+
+2. Using `Object.keys()` to enumerate object properties:
+
+```js
+const square = {
+  corner: 4,
+  draw() {
+    console.log('draw square');
+  },
+};
+
+for (let key of Object.keys(square)) {
+  console.log(key);
+}
+```
+
+Output:
+
+```js
+corner;
+draw;
+```
+
+3. Using `Object.entries()` to enumerate object properties:
+
+```js
+const square = {
+  corner: 4,
+  draw() {
+    console.log('draw square');
+  },
+};
+
+for (let entry of Object.entries(square)) {
+  console.log(entry);
+}
+```
+
+Output:
+
+```js
+['corner', 4][
+  ('draw',
+  function draw() {
+    console.log('draw square');
+  })
+];
+```
+
+4. Checking if a property exists in an object:
+
+```js
+const square = {
+  corner: 4,
+  draw() {
+    console.log('draw square');
+  },
+};
+
+if ('radius' in square) {
+  console.log('yes');
+} else {
+  console.log('No');
+}
+```
+
+Output:
+
+```
+No
+```
+
+> **Notes:**
+>
+> - The `for...in` loop also iterates over properties inherited from the object's prototype chain.
+> - To only loop over an object's own properties (not inherited ones), we can use the `hasOwnProperty()` method.
