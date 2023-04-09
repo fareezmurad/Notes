@@ -338,3 +338,214 @@ No
 >
 > - The `for...in` loop also iterates over properties inherited from the object's prototype chain.
 > - To only loop over an object's own properties (not inherited ones), we can use the `hasOwnProperty()` method.
+
+## Cloning an Object
+
+In JavaScript, objects are reference types, which means that if you assign an object to a variable, you're actually assigning a reference to that object. This can be problematic if you want to create a copy of the object, rather than a reference to it. Cloning an object can be done in several ways.
+
+1. Old Method
+
+```js
+const pentagon = {
+  corner: 5,
+  draw: function () {
+    console.log('draw pentagon');
+  },
+};
+
+const another1 = {};
+for (let key in pentagon) {
+  another1[key] = pentagon[key];
+}
+```
+
+This method iterates over the properties of the source object and copies each property to the target object.
+
+2. `Object.assign` Method:
+
+```js
+const another1 = Object.assign({}, pentagon);
+```
+
+This method creates a new empty object as the target object and then copies all the properties of the source object to it. It can also be used to add new properties to the object.
+
+```js
+const another1 = Object.assign({ color: 'red' }, pentagon);
+```
+
+This method add new properties to the target object.
+
+3. Spread Operator Method:
+
+```js
+const another1 = { ...pentagon };
+```
+
+This method spreads all the properties and methods of the source object into a new object.
+
+- `Object.assign()` can be used to clone an object or to combine multiple objects into a single object.
+- Cloning an object can be useful when you want to make changes to an object without affecting the original object.
+- The spread operator can also be used to clone arrays.
+
+## Garbage Collection
+
+Garbage collection is a process in which the JavaScript engine automatically frees up memory that is no longer being used by the program. This helps prevent memory leaks and improves overall performance. The garbage collector runs in the background and periodically checks for objects that are no longer referenced by the program, and then deallocates their memory so that it can be reused by other parts of the program. This makes memory management much easier and less error-prone for developers compared to other low-level programming languages like C and C++.
+
+## Math Object
+
+The Math object is a built-in object in JavaScript that provides various properties and methods for mathematical constants and functions. It is not a function object and works only with number type, not with BigInt. All properties and methods of Math are static, meaning that you can access them using the Math object itself, and you do not need to create an instance of Math.
+
+Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
+
+Examples:
+
+- Using `Math.random()` method to generate a random number between 0 and a given `limit` using `the Math.floor()` method:
+
+```js
+function randomNumberGenerator(limit) {
+  return Math.floor(Math.random() * limit);
+}
+
+console.log(randomNumberGenerator(100)); // Outputs a random number between 0 and 99
+```
+
+2. Using the `Math.PI` property to get the value of pi:
+
+```js
+const pi = Math.PI;
+console.log(pi); // Outputs 3.141592653589793
+```
+
+3. Using the `Math.sqrt()` method to calculate the square root of a number:
+
+```js
+const number = 25;
+const squareRoot = Math.sqrt(number);
+console.log(squareRoot); // Outputs 5
+```
+
+## String
+
+In JavaScript, a string is a primitive data type that represents a sequence of characters. A string can be created using single or double quotes, or backticks for template literals.
+
+There is also a String object that can be used to manipulate strings with its methods. However, it is not recommended to use the String object since it is slower and has a more complex syntax compared to the string primitive.
+
+Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+
+Examples:
+
+1. Creating a string primitive:
+
+```js
+const message = 'This is my first message';
+console.log(typeof message); // Output: string
+```
+
+2. Creating a string object:
+
+```js
+const anotherString = new String('hi');
+console.log(typeof anotherString); // Output: object
+```
+
+3. Using a string method:
+
+```js
+const message = 'This is my first message';
+console.log(message.length); // Output: 24
+```
+
+4. Using backticks for template literals:
+
+```js
+const name = 'John';
+console.log(`Hello, ${name}!`); // Output: Hello, John!
+```
+
+5. Using escape sequence:
+
+```js
+console.log("Hello, 'World'!"); // Output: Hello, 'World'!
+console.log('Hello, "World"!'); // Output: Hello, "World"!
+console.log('Hello, \nWorld!'); // Output: Hello,
+//                                         World!
+```
+
+## Template Literals
+
+Template literals are string literals that allow embedded expressions. They are enclosed by the backtick ( \` \` ) (grave accent) character instead of double or single quotes.
+
+Template literals provide an easy way to create multi-line strings and add variables, expressions or functions into a string.
+
+Examples:
+
+1. Basic Example of using template literals:
+
+```js
+const name = 'John';
+const age = 30;
+const sentence = `My name is ${name} and I am ${age} years old.`;
+console.log(sentence);
+```
+
+Output:
+
+```js
+My name is John and I am 30 years old.
+```
+
+2. Using expressions inside template literals:
+
+```js
+const num1 = 10;
+const num2 = 5;
+const result = `The result of adding ${num1} and ${num2} is ${num1 + num2}.`;
+console.log(result);
+```
+
+Output:
+
+```js
+The result of adding 10 and 5 is 15.
+```
+
+3. Using functions inside template literals:
+
+```js
+function greet(name) {
+  return `Hello ${name}!`;
+}
+
+const message = `${greet('John')} Welcome to our website.`;
+console.log(message);
+```
+
+Output:
+
+```js
+Hello John! Welcome to our website.
+```
+
+## Date
+
+JavaScript provides a built-in Date object that represents a single moment in time in a platform-independent format. The Date object is used to work with dates and times. It can be created using the new keyword followed by the Date() constructor function with different parameters.
+
+Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+
+Examples:
+
+1. Creating a new Date object:
+
+```js
+const now = new Date(); // current date and time
+const date1 = new Date('March 30 2023 23:03'); // specific date and time
+const date2 = new Date(2023, 2, 30, 23, 3); // specific date and time
+```
+
+2. Setting the year of a Date object:
+
+```js
+now.setFullYear(2020);
+```
+
+> **Note:** The Date object has several other methods for getting and setting different parts of a date and time, such as `getMonth()`, `getDate()`, `getHours()`, `getMinutes()`, etc.
