@@ -102,7 +102,7 @@ console.log(sum(1, 2, 3, 4, 5)); // 15
 
 ## Rest Operator
 
-The rest operator in JavaScript is represented by three dots (`...`) in a function parameter. The rest operator allows us to pass a varying number of arguments to a function and store all of them in an array. The rest operator must be the last parameter in the function definition, and it is used to replace the use of the `arguments` object. It is important to note that the rest operator only gathers the arguments that were not assigned to other parameters in the function.
+The rest operator in JavaScript is represented by three dots (`...`) in a function parameter. The rest operator allows us to pass a varying number of arguments to a function and store all of them in an **array**. The rest operator must be the last parameter in the function definition, and it is used to replace the use of the `arguments` object. It is important to note that the rest operator only gathers the arguments that were not assigned to other parameters in the function.
 
 Examples:
 
