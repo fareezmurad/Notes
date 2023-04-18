@@ -7,7 +7,7 @@ function Stopwatch() {
   const duration = () => {
     if (isRunning) {
       const getTime = new Date().getTime();
-      return (getTime - startTime) / 1000;
+      return (getTime + endTime - startTime) / 1000;
     } else return (endTime - startTime) / 1000;
   };
 
